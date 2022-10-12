@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http.-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>String</title>
+	  </head>
+	  <body>
+	     <input type="text" id="inputbox">
+		 <button id="but" onclick=" ans()">Ans</button>
+		 <p id="para"></p>
+	  <script>
+	           
+			      function ans(){
+				      var number=document.getElementById("inputbox").value;
+					  var para=document.getElementById("para");
+					   console.log(para);
+						   var Array=[];
+						   while (number!=0){
+							var rem = number%10;
+							number = (number-rem)/10;
+							Array.push(rem);
+						   }
+						  
+						   for(var i=Array.length-1; i>=0; i--){
+						     numbertoword(Array[i]);
+						    
+						   }
+						   }
+						   function numbertoword(number){
+						    switch (number){
+							case 1 :
+							para.innerText+="one";
+							 break;
+							 
+							case 2:
+							para.innerText+="Two";
+							 break;
+							 
+							case 3:
+							para.innerText+="Three";
+							 break;
+							 
+							case 4:
+							para.innerText+="four";
+							 break;
+							 
+							case 5:
+							para.innerText+="Five";
+							 break;
+							 
+							case 6:
+							para.innerText+="Six";
+							 break;
+							 
+							case 7:
+							para.innerText+="Seven";
+							 break;
+							 
+							case 8:
+							para.innerText+="Eigth";
+							 break;
+							 
+							case 9:
+							para.innerText+="Nine";
+							 break;
+							 
+							default :
+							
+							para.innerText+="Zero";
+							
+							
+							
+							}
+						   }
+						   </script>
+						   </body>
